@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Jersey+20&family=Metal+Mania&family=Orbitron:wght@400..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: calc(var(--vh) * 100);
+}
+
+
+/* -- loader styles --  */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #000000;
+    /* negro bordo elegante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+    transition: opacity 1s ease;
+}
+
+.loader-img {
+    position: absolute;
+    width: 140px;
+    opacity: 0;
+    transform: scale(0.95);
+    transition:
+        opacity 1.2s ease,
+        transform 2s cubic-bezier(.22, .61, .36, 1);
+}
+
+/* imagen visible */
+
+.loader-img.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* mismo codigo pero con efecto latido*/
+
+
+
+/* -- background styles -- */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url(../background/desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    will-change: transform;
+}
+
+@media (max-width: 580px) {
+    body::before {
+        background-image: url(../background/mobile.png);
+    }
+}
+
+/* main section */
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-header {
+    padding-top: 3rem;
+    font-family: "Metal Mania", system-ui;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    color: #000000;
+    text-shadow: -1px -1px 0 #230000fa, 1px -1px 0 #b0000070, -1px 1px 0 #cd000085, 1px 1px 0 #a93636ab, 0px -1px 0 #d88181, 0px 1px 0 #000000a1, -1px 0px 0 #b9b9b9, 1px 0px 0 #d4d4d4;
+    opacity: 70%;
+}
+
+
+/* product */
+
+.product-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.product-img img {
+    height: 22rem;
+    animation: redAura 4s ease-in-out infinite;
+}
+
+
+@keyframes redAura {
+
+    0% {
+
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 6px #b00000) drop-shadow(0 0 12px #a93636);
+
+        -webkit-filter:
+            drop-shadow(0 0 6px #b00000) drop-shadow(0 0 12px #a93636);
+    }
+
+    50% {
+
+        transform: scale(1.04);
+
+        filter:
+            drop-shadow(0 0 18px #cd0000) drop-shadow(0 0 32px #b00000);
+
+        -webkit-filter:
+            drop-shadow(0 0 18px #cd0000) drop-shadow(0 0 32px #b00000);
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 6px #b00000) drop-shadow(0 0 12px #a93636);
+
+        -webkit-filter:
+            drop-shadow(0 0 6px #b00000) drop-shadow(0 0 12px #a93636);
+    }
+
+}
+
+
+/* seccion verificar verificador*/
+
+.verify-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.verify-btn {
+    font-size: 1rem;
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #770a0a, #ff7777, #770a0a, #770a0a, #ff7777, #770a0a);
+    background-size: 250%;
+    background-position: left;
+    color: #bb0404bd;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+    position: relative;
+    font-family: "Metal Mania", system-ui;
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: all .5s cubic-bezier(.22, .61, .36, 1);
+}
+
+.verify-btn::before {
+    position: absolute;
+    content: "VERIFICAR";
+    color: #bb0404bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+}
+
+.verify-btn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.verify-btn:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+}
+
+.verify-btn:active {
+    transform: scale(0.95);
+}
+
+
+.verify-btn.loading {
+    width: 60px;
+    border-radius: 50px;
+}
+
+.progress {
+
+    width: 220px;
+    height: 6px;
+    background: #1a0000;
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+
+}
+
+.progress.show {
+    opacity: 1;
+}
+
+.progress-bar {
+
+    height: 100%;
+    width: 0%;
+
+    background:
+        linear-gradient(90deg,
+            #770a0a,
+            #ff2a2a,
+            #ff7777,
+            #ff2a2a,
+            #770a0a);
+
+    background-size: 200%;
+
+    animation: energyFlow 2s linear infinite;
+
+    box-shadow:
+        0 0 10px #cd0000,
+        0 0 20px #b00000;
+
+    transition: width .4s ease;
+
+}
+
+@keyframes energyFlow {
+
+    from {
+        background-position: 0%
+    }
+
+    to {
+        background-position: 200%
+    }
+
+}
+
+.success {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: .6s ease;
+
+    font-family: "Metal Mania", system-ui;
+    color: #000000;
+    font-size: 1.7rem;
+    text-shadow: -1px -1px 0 #230000fa, 1px -1px 0 #b0000070, -1px 1px 0 #cd000085, 1px 1px 0 #a93636ab, 0px -1px 0 #d88181, 0px 1px 0 #000000a1, -1px 0px 0 #b9b9b9, 1px 0px 0 #d4d4d4;
+    letter-spacing: 1px;
+
+
+}
+
+.success.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+
+/* -- footer -- */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-img .img-top {
+    height: 8rem;
+    filter: drop-shadow(2px 3px 0px #000000);
+}
+
+.footer-img .img-bottom {
+    height: 12rem;
+    margin-top: -7rem;
+    filter: drop-shadow(2px 3px 0px #000000);
+}
+
+.footer p {
+    font-family: "Jersey 20", system-ui;
+    color: #b4b4b4;
+    letter-spacing: 2px;
+    font-size: .9rem;
+    opacity: 1;
+    margin-top: 7rem;
+    position: absolute;
+    font-style: italic;
+}
+
+/* ============================= */
+/* FADE UP SYSTEM CONTROLADO */
+/* ============================= */
+
+/* estado inicial (antes del loader) */
+
+.fade-up {
+
+    opacity: 0;
+    transform: translateY(40px);
+
+}
+
+/* SOLO cuando el loader termina */
+
+body.loaded .fade-up {
+
+    animation: fadeUpAnimation 1s cubic-bezier(.22, .61, .36, 1) forwards;
+
+}
+
+@keyframes fadeUpAnimation {
+
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* delays escalonados */
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+.delay-6 { animation-delay: 1.2s; }
