@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cero Romántico - Golden Hats</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
+        <!-- Model Viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="shortcut icon" href="./assets/logos/top.png" type="image/x-icon">
 </head>
 
 <body>
@@ -47,10 +50,19 @@
         </div>
 
         <footer class="footer fade-up delay-4">
-            <div class="footer-img">
+
+            <div class="logo-3d-container">
+                <!-- Logo 3D reemplaza al logo anterior -->
+                <model-viewer src="./assets/3d/logo3d.glb" alt="GH" auto-rotate
+                    rotation-per-second="30deg" camera-controls="false" interaction-prompt="none" disable-zoom
+                    disable-pan     orientation="0deg 0deg 0deg" style="height:11rem; width:11rem;">
+                </model-viewer>
+            </div>
+
+            <!-- <div class="footer-img">
                 <img src="../assets/logos/top.png" alt="golden hats"  class="img-top">
                 <img src="../assets/logos/bottom.png" alt=" golden hats" class="img-bottom">
-            </div>
+            </div> -->
 
             <p>© 2026 Golden Hats. Powered by Focus Vision.</p>
         </footer>
