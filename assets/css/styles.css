@@ -79,6 +79,7 @@ body::before {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: -4.5rem;
 }
 
 .title-header {
@@ -99,6 +100,12 @@ body::before {
          2px  0px 0 #ffffff66;
 
     opacity: 70%;
+}
+
+.title-header-img {
+    filter: drop-shadow(2px 3px 0px black);
+    height: 13rem;
+    width: 100;
 }
 
 
