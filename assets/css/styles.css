@@ -100,11 +100,10 @@ body::before {
     align-items: center;
     justify-content: center;
     padding-top: 0rem;
-    margin-top: -1rem;
 }
 
 .product-img img {
-    height: 18rem;
+    height: 16rem;
     animation: redAura 4s ease-in-out infinite;
 }
 
