@@ -280,9 +280,9 @@ body::before {
     transition: .6s ease;
 
     font-family: "Metal Mania", system-ui;
-    color: #000000;
+    color: #000000cc;
     font-size: 1.7rem;
-    text-shadow: -1px -1px 0 #230000fa, 1px -1px 0 #b0000070, -1px 1px 0 #cd000085, 1px 1px 0 #a93636ab, 0px -1px 0 #d88181, 0px 1px 0 #000000a1, -1px 0px 0 #b9b9b97e, 1px 0px 0 #d4d4d485;
+    text-shadow: -1px -1px 0 #230000fa, 1px -1px 0 #b0000070, -1px 1px 0 #cd000085, 1px 1px 0 #a93636ab, 0px -1px 0 #d88181b6, 0px 1px 0 #000000a1, -1px 0px 0 #58151552, 1px 0px 0 #5a1f1f56;
     letter-spacing: 1px;
 
 
