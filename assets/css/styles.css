@@ -103,7 +103,7 @@ body::before {
 }
 
 .product-img img {
-    height: 22rem;
+    height: 18rem;
     animation: redAura 4s ease-in-out infinite;
 }
 
