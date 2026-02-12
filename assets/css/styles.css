@@ -99,7 +99,8 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 0rem;
+    margin-top: -1rem;
 }
 
 .product-img img {
@@ -305,6 +306,7 @@ body::before {
     width: 100%;
     position: absolute;
     bottom: 0;
+    margin-bottom: -5rem;
 }
 
 .footer-img {
