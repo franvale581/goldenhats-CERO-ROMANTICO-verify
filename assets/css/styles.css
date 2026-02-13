@@ -89,7 +89,27 @@ body::before {
 
 @media (max-height: 755px) {
     body::before {
-        background-image: url(../background/mobile2.png);
+        background-image: url(../background/mobile-4.jpg);
+    }
+
+    .product-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1rem;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        /* position: absolute; */
+        bottom: 74px;
+        /* margin-bottom: -5rem; */
+        height: 13rem !important; 
     }
 }
 
@@ -109,15 +129,15 @@ body::before {
     font-size: 1.8rem;
     color: #000000;
 
-            text-shadow:
+    text-shadow:
         -2px -1px 0 #300000,
-         2px -1px 0 #ff4444,
-        -1px  2px 0 #a00000,
-         1px  2px 0 #600000,
-         0px -2px 0 #ff9999,
-         0px  2px 0 #000000cc,
-        -2px  0px 0 #aaaaaa66,
-         2px  0px 0 #ffffff66;
+        2px -1px 0 #ff4444,
+        -1px 2px 0 #a00000,
+        1px 2px 0 #600000,
+        0px -2px 0 #ff9999,
+        0px 2px 0 #000000cc,
+        -2px 0px 0 #aaaaaa66,
+        2px 0px 0 #ffffff66;
 
     opacity: 70%;
 }
@@ -231,15 +251,15 @@ body::before {
     transition-duration: 1s;
     background-color: rgba(0, 0, 0, 0.842);
     background-size: 200%;
-                text-shadow:
+    text-shadow:
         -2px -1px 0 #300000,
-         2px -1px 0 #ff4444,
-        -1px  2px 0 #a00000,
-         1px  2px 0 #600000,
-         0px -2px 0 #ff9999,
-         0px  2px 0 #000000cc,
-        -2px  0px 0 #aaaaaa00,
-         2px  0px 0 #ffffff00;
+        2px -1px 0 #ff4444,
+        -1px 2px 0 #a00000,
+        1px 2px 0 #600000,
+        0px -2px 0 #ff9999,
+        0px 2px 0 #000000cc,
+        -2px 0px 0 #aaaaaa00,
+        2px 0px 0 #ffffff00;
 }
 
 .verify-btn:hover {
@@ -328,15 +348,15 @@ body::before {
     font-family: "Metal Mania", system-ui;
     color: #000000cc;
     font-size: 1.7rem;
-            text-shadow:
+    text-shadow:
         -2px -1px 0 #300000,
-         2px -1px 0 #ff4444,
-        -1px  2px 0 #a00000,
-         1px  2px 0 #600000,
-         0px -2px 0 #ff9999,
-         0px  2px 0 #000000cc,
-        -2px  0px 0 #aaaaaa66,
-         2px  0px 0 #ffffff66;
+        2px -1px 0 #ff4444,
+        -1px 2px 0 #a00000,
+        1px 2px 0 #600000,
+        0px -2px 0 #ff9999,
+        0px 2px 0 #000000cc,
+        -2px 0px 0 #aaaaaa66,
+        2px 0px 0 #ffffff66;
     letter-spacing: 1px;
 
 
@@ -436,9 +456,26 @@ body.loaded .fade-up {
 
 /* delays escalonados */
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-.delay-4 { animation-delay: 0.8s; }
-.delay-5 { animation-delay: 1s; }
-.delay-6 { animation-delay: 1.2s; }
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+.delay-5 {
+    animation-delay: 1s;
+}
+
+.delay-6 {
+    animation-delay: 1.2s;
+}
