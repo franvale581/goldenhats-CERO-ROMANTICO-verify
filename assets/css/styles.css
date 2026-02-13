@@ -72,6 +72,27 @@ body::before {
     }
 }
 
+/* ahora con alto height*/
+
+@media (max-height: 916px) {
+    body::before {
+        background-image: url(../background/mobile3.jpg);
+    }
+}
+
+
+@media (max-height: 855px) {
+    body::before {
+        background-image: url(../background/mobile3.jpg);
+    }
+}
+
+@media (max-height: 755px) {
+    body::before {
+        background-image: url(../background/mobile2.png);
+    }
+}
+
 /* main section */
 
 .main-section {
@@ -193,7 +214,7 @@ body::before {
     position: relative;
     font-family: "Metal Mania", system-ui;
     font-weight: 600;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     transition: all .5s cubic-bezier(.22, .61, .36, 1);
 }
 
